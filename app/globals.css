@@ -2,32 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-image-day: url('../public/background.jpg');
+  --background-image-night: url('../public/background.jpg');
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-image-day: url('../public/background.jpg');
+  --background-image-night: url('../public/background.jpg');
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-image: var(--background-image-day); /* Imagen de fondo por defecto */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-image: var(--background-image-night); /* Imagen de fondo en modo oscuro */
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Nueva regla para mover los elementos en móviles */
+  .grid > div:nth-child(2) {
+    order: 2; /* Mueve la segunda columna al tercer lugar */
+  }
+  .grid > div:nth-child(2) h3 {
+    order: 1; /* Mueve el h3 al segundo lugar dentro de la segunda columna */
+  }
+  .grid > div:nth-child(2) button {
+    order: 3; /* Mueve el botón al primer lugar dentro de la segunda columna */
   }
 }

@@ -13,6 +13,9 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontSize: {
+        'custom-base-title': '72px', // Define el tamaño de fuente por defecto
+      },
     },
   },
   plugins: [],
