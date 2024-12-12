@@ -24,6 +24,8 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  padding: 0;
+  margin: 0;
 }
 
 @layer utilities {
@@ -35,6 +37,8 @@ body {
 @media (prefers-color-scheme: dark) {
   body {
     background-image: var(--background-image-night); /* Imagen de fondo en modo oscuro */
+    padding: 0;
+    margin: 0;
   }
 }
 
@@ -53,4 +57,35 @@ body {
   .grid > div:nth-child(2) button {
     order: 3; /* Mueve el botón al primer lugar dentro de la segunda columna */
   }
+}
+
+@keyframes bounce-box {
+  0% { transform: translate(0); }
+  50% { transform: translateY(-5%); }
+  25% { transform: translate(6%, -5%); }
+  75% { transform: translate(7%, 0); }
+  100% { transform: translate(0); }
+}
+
+.bounce-box {
+  animation: bounce-box 5s ease-in-out infinite;
+}
+
+
+.padding-button{
+  display: flex;
+  justify-content: center;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, rgba(250, 82, 82, 0.7), rgba(221, 36, 118, 0.7)); /* Gradiente de izquierda a derecha */
+  -webkit-background-clip: text; /* Compatibilidad con navegadores basados en WebKit */
+  background-clip: text; /* Propiedad estándar para otros navegadores */
+  -webkit-text-fill-color: transparent; /* Hace transparente el texto para mostrar el gradiente */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Para evitar problemas con tamaños */
 }
