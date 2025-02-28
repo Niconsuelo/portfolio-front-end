@@ -2,25 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-image-day: url('../public/background.jpg');
-  --background-image-night: url('../public/background.jpg');
+  --background-image-day: url("../public/background.jpg");
+  --background-image-night: url("../public/background.jpg");
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-image-day: url('../public/background.jpg');
-  --background-image-night: url('../public/background.jpg');
+    --background-image-day: url("../public/background.jpg");
+    --background-image-night: url("../public/background.jpg");
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-image: var(--background-image-day); /* Imagen de fondo por defecto */
+  background-image: var(
+    --background-image-day
+  ); /* Imagen de fondo por defecto */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -28,57 +28,78 @@ body {
   margin: 0;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background-image: var(--background-image-night); /* Imagen de fondo en modo oscuro */
-    padding: 0;
-    margin: 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* Nueva regla para mover los elementos en móviles */
-  .grid > div:nth-child(2) {
-    order: 2; /* Mueve la segunda columna al tercer lugar */
-  }
-  .grid > div:nth-child(2) h3 {
-    order: 1; /* Mueve el h3 al segundo lugar dentro de la segunda columna */
-  }
-  .grid > div:nth-child(2) button {
-    order: 3; /* Mueve el botón al primer lugar dentro de la segunda columna */
-  }
-}
-
 @keyframes bounce-box {
-  0% { transform: translate(0); }
-  50% { transform: translateY(-5%); }
-  25% { transform: translate(6%, -5%); }
-  75% { transform: translate(7%, 0); }
-  100% { transform: translate(0); }
+  0% {
+    transform: translateX(0) translateY(0); /* Empieza en la posición original */
+  }
+  10% {
+    transform: translateX(-8%) translateY(10%); /* Movimiento aleatorio a la izquierda y hacia abajo */
+  }
+  20% {
+    transform: translateX(8%) translateY(-8%); /* Movimiento aleatorio a la derecha y hacia arriba */
+  }
+  30% {
+    transform: translateX(-6%) translateY(4%); /* Movimiento a la izquierda y hacia abajo */
+  }
+  40% {
+    transform: translateX(6%) translateY(-6%); /* Movimiento aleatorio a la derecha y hacia arriba */
+  }
+  50% {
+    transform: translateX(10%) translateY(12%); /* Movimiento a la derecha y hacia abajo */
+  }
+  60% {
+    transform: translateX(-4%) translateY(3%); /* Movimiento a la izquierda y hacia abajo */
+  }
+  70% {
+    transform: translateX(7%) translateY(-4%); /* Movimiento a la derecha y hacia arriba */
+  }
+  80% {
+    transform: translateX(-5%) translateY(8%); /* Movimiento a la izquierda y hacia abajo */
+  }
+  90% {
+    transform: translateX(5%) translateY(-2%); /* Movimiento a la derecha y hacia arriba */
+  }
+  100% {
+    transform: translateX(0) translateY(0); /* Vuelve a la posición original */
+  }
 }
+
 
 .bounce-box {
-  animation: bounce-box 5s ease-in-out infinite;
+  animation: bounce-box 15s ease-in-out infinite;
 }
 
-
-.padding-button{
+.padding-button {
   display: flex;
   justify-content: center;
 }
 
 .text-gradient {
-  background: linear-gradient(to right, rgba(250, 82, 82, 0.7), rgba(221, 36, 118, 0.7)); /* Gradiente de izquierda a derecha */
+  background: linear-gradient(
+    to right,
+    rgba(250, 82, 82, 0.7),
+    rgba(221, 36, 118, 0.7)
+  ); /* Gradiente de izquierda a derecha */
+  -webkit-background-clip: text; /* Compatibilidad con navegadores basados en WebKit */
+  background-clip: text; /* Propiedad estándar para otros navegadores */
+  -webkit-text-fill-color: transparent; /* Hace transparente el texto para mostrar el gradiente */
+}
+.color-gradient {
+  background: linear-gradient(
+    to right,
+    rgba(250, 82, 82, 0.7),
+    rgba(221, 36, 118, 0.7)
+  ); /* Gradiente de izquierda a derecha */
+  -webkit-background-clip: text; /* Compatibilidad con navegadores basados en WebKit */
+  background-clip: text; /* Propiedad estándar para otros navegadores */
+  -webkit-text-fill-color: transparent; /* Hace transparente el texto para mostrar el gradiente */
+}
+.text-gradient-title {
+  background: linear-gradient(
+    to right,
+    #fa5252,
+    #dd2476
+  ); /* Gradiente de izquierda a derecha */
   -webkit-background-clip: text; /* Compatibilidad con navegadores basados en WebKit */
   background-clip: text; /* Propiedad estándar para otros navegadores */
   -webkit-text-fill-color: transparent; /* Hace transparente el texto para mostrar el gradiente */
@@ -88,4 +109,42 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box; /* Para evitar problemas con tamaños */
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.card {
+  perspective: 1000px; /* Agrega perspectiva para el efecto 3D */
+}
+
+.card-inner {
+  transition: transform 0.6s;
+  transform-style: preserve-3d; /* Mantiene la profundidad 3D */
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg); /* Rota la tarjeta 180 grados */
+}
+
+.card-front,
+.card-back {
+  backface-visibility: hidden; /* Esconde la cara posterior cuando está oculta */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.card-front {
+  transform: rotateY(0deg); /* Cara frontal, sin rotación */
+}
+
+.card-back {
+  transform: rotateY(180deg); /* Cara posterior, inicialmente rotada */
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg); /* Girar todo el contenido cuando está volcada */
 }
