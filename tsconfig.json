@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "types": ["@types/react", "@material-tailwind/react"],
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
