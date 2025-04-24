@@ -1,11 +1,6 @@
 import React from "react";
+import { ButtonProps } from "../app/models/buttonProps"
 
-interface ButtonProps {
-  onClick?: () => void;
-  buttonText: string;
-  className?: string;
-  href?: string; // Para enlaces
-}
 
 const Button: React.FC<ButtonProps> = ({ buttonText, className, href, onClick }) => {
   if (href) {
