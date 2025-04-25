@@ -4,13 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
-    "predeploy": "npm run build",
+    "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-     "deploy": "gh-pages -d out"
+    "lint": "next lint"
   },
-  "homepage": "https://niconsuelo.github.io/portfolio-front-end",
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.7.1",
     "@fortawesome/react-fontawesome": "^0.2.2",
