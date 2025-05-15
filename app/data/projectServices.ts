@@ -1,4 +1,4 @@
-import { faArrowUpRightFromSquare, faCodeBranch, faLaptop, faLaptopCode, faTerminal } from "@fortawesome/free-solid-svg-icons";
+import { faArrowUpRightFromSquare, faCodeBranch, faCode, faLaptopCode, faTerminal, faSquare, faUpRightFromSquare, faLaptop } from "@fortawesome/free-solid-svg-icons";
 
 // projectServiceData.ts
 export const projectServices = [
@@ -19,14 +19,14 @@ export const projectServices = [
     ],
     linkproject: [
       {
-        href: "https://google.com/",
+        href: "https://github.com/Niconsuelo/chatxhunter",
         label: "dataverse chat code",
-        icon: faCodeBranch,
+        icon: faCode,
       },
       {
         href: "https://hunterxversexchat.vercel.app/",
         label: "dataverse chat page",
-        icon: faArrowUpRightFromSquare,
+        icon: faLaptop,
       },
     ],
   },
@@ -34,7 +34,7 @@ export const projectServices = [
     id: "project2",
     name: "Search movie",
     description:
-      "Informative website for users focused on the search of movies,series and more, adapted to an intelligent search and sorting based on customer requirements.",
+      "Informative WEBSITE for users focused on the search of movies,series and more, adapted to an intelligent search and sorting based on customer requirements.",
     icon: "FaMobileAlt",
     video: "/project2.mp4",
     extraInfo: "Review",
@@ -47,14 +47,14 @@ export const projectServices = [
     ],
     linkproject: [
       {
-        href: "https://google.com/",
+        href: "https://github.com/Niconsuelo/searchmovie",
         label: "search movie code",
-        icon: faCodeBranch,
+        icon: faCode,
       },
       {
         href: "https://dev-014-movie-challenge-fw-gold.vercel.app/",
         label: "search movie page",
-        icon: faArrowUpRightFromSquare,
+        icon: faLaptop,
       },
     ],
   },
@@ -75,14 +75,14 @@ export const projectServices = [
     ],
     linkproject: [
       {
-        href: "https://google.com/",
+        href: "https://github.com/Niconsuelo/restorder",
         label: "point of sale code",
-        icon: faCodeBranch,
+        icon: faCode,
       },
       {
         href: "https://pointofsale.restaurant.app/",
         label: "point of sale page",
-        icon: faArrowUpRightFromSquare,
+        icon: faLaptop,
       },
     ],
   },

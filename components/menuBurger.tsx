@@ -74,14 +74,16 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
         </button>
 
         <div className="flex flex-col space-y-6 mr-28 mb-2 mt-2">
+          <div className="w-[120px] h-[120px] rounded-full bg-gradient-to-b from-[#DD2476] to-[#4543A0] p-[2px]">
           <Image
             src={avatar}
             alt="user profile picture"
-            width={120}
-            height={120}
-            className="content-center border-2 bg-center border-transparent bg-gradient-to-b from-[#DD2476] to-[#DD2476] rounded-full"
+            width={116}
+            height={116}
+            className="rounded-full object-cover w-full h-full"
             priority
           />
+          </div>
           <div className="leading-tight">
             <h1 className="font-roboto font-semibold uppercase text-[22px] md:text-[30px] lg:text-[50px] text-white leading-tight">
               Nicole Aburto
@@ -93,9 +95,10 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
 
           {/* Enlaces del menú */}
           <a
+          href="#home"
             onClick={() => {
-              handleLinkClick(homeRef, "home");
               hiddenMenu(); // Cierra el menú al hacer clic
+              handleLinkClick(homeRef, "home");
             }}
             className="relative text-white hover:underline text-lg py-1 font-thin"
           >
@@ -105,13 +108,10 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
           </a>
 
           <a
+          href="#about"
             onClick={() => {
-              handleLinkClick(aboutRef, "home");
-              hiddenMenu(); // Cierra el menú al hacer clic
-              aboutRef.current?.scrollIntoView({
-                behavior: "smooth",
-                block: "center", // Asegura que el contenido se vea centrado en la pantalla
-              });
+              hiddenMenu();
+              handleLinkClick(aboutRef, "about");
             }}
             className="relative text-white hover:underline text-lg py-1 font-thin"
           >
@@ -121,9 +121,10 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
           </a>
 
           <a
+          href="#services"
             onClick={() => {
-              handleLinkClick(servicesRef, "home");
-              hiddenMenu(); // Cierra el menú al hacer clic
+              hiddenMenu();
+              handleLinkClick(servicesRef, "services");
             }}
             className="relative text-white hover:underline text-lg py-1 font-thin"
           >
@@ -133,9 +134,10 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
           </a>
 
           <a
+          href="#skills"
             onClick={() => {
-              handleLinkClick(skillsRef, "home");
-              hiddenMenu(); // Cierra el menú al hacer clic
+              hiddenMenu();
+              handleLinkClick(skillsRef, "skills");
             }}
             className="relative text-white hover:underline text-lg py-1 font-thin"
           >
@@ -145,9 +147,10 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
           </a>
 
           <a
+          href="#projects"
             onClick={() => {
-              handleLinkClick(projectsRef, "home");
-              hiddenMenu(); // Cierra el menú al hacer clic
+              hiddenMenu();
+              handleLinkClick(projectsRef, "projects");
             }}
             className="relative text-white hover:underline text-lg py-1 font-thin"
           >
@@ -157,9 +160,10 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
           </a>
 
           <a
+          href="#contact"
             onClick={() => {
-              handleLinkClick(contactRef, "home");
-              hiddenMenu(); // Cierra el menú al hacer clic
+              hiddenMenu();
+              handleLinkClick(contactRef, "contact");
             }}
             className="relative text-white hover:underline text-lg py-1 font-thin"
           >
