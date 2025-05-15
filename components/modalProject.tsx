@@ -31,7 +31,7 @@ const ModalProject: React.FC<ModalProps> = ({ project, onClose }) => {
         {/* Botón de cierre */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-4xl text-gray-600 hover:text-[#FA5252] transition-colors"
+          className="absolute top-4 right-4 text-6xl text-white hover:text-[#FA5252] transition-colors"
         >
           &times;
         </button>
@@ -69,7 +69,7 @@ const ModalProject: React.FC<ModalProps> = ({ project, onClose }) => {
                 <a href={link.href} target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon
                     icon={link.icon}
-                    className="w-9 h-9 text-black"
+                    className="w-11 h-11 text-black"
                   />
                 </a>
               </div>

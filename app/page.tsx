@@ -95,14 +95,16 @@ export default function Home() {
   </div>;
 
   //Para burgerMenu
-  const handleLinkClickNav = (
-    ref: React.RefObject<HTMLElement>,
-    name: string
-  ) => {
-    if (ref.current) {
-      ref.current.scrollIntoView({ behavior: "smooth" });
+  const handleLinkClickNav = (ref: React.RefObject<HTMLElement>, section: string) => {
+    if (window.innerWidth <= 768) {
+      // En pantallas móviles (ajusta el ancho según necesites)
+      ref.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+    } else {
+      // En desktop scroll normal al inicio de la sección
+      ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
+
   //Esconde el burgerMenu
   const hiddenMenu = () => {
     setIsMenuOpen((prevState) => !prevState);
@@ -182,7 +184,7 @@ export default function Home() {
               the perfect mix of creativity and logic, where every line of code
               tells a story.I like to take on new challenges and constantly
               learn from a team. Outside of programming, Im a big fan of anime
-              and music. If youre looking for someone curious and with
+              and music. If you are looking for someone curious and with
               dedication to add value to your team, lets get connected! 🚀
             </p>
           </div>

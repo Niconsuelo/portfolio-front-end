@@ -10,7 +10,8 @@ interface IconCardProps {
 
 const IconCard: React.FC<IconCardProps> = ({ src, alt, label }) => {
   return (
-    <div className="flex flex-col items-center justify-center text-center border-2 rounded-lg w-[70px] h-[60px] p-4 lg:w-[160px] lg:h-[160px] border-pink-900 opacity-50 lg:hover:opacity-100 lg:transition lg:duration-300 hover:border-4">
+    <div className="flex flex-col items-center justify-center text-center border-2 rounded-lg w-[70px] h-[60px] p-4 lg:w-[160px] lg:h-[160px] border-pink-900 lg:border-pink-900 lg:opacity-50 lg:hover:opacity-100 lg:transition lg:duration-300 hover:border-4">
+
       <Image
         src={src}
         alt={alt}
