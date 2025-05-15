@@ -24,8 +24,8 @@ Este portafolio ha sido creado para mostrar mis proyectos y habilidades como des
 
 | Proyecto | Descripción | Tecnologías |
 |---------|-------------|-------------|
-| [Chat hunter X](#) | Aplicación SPA enfocada en fanáticos del anime que les permite interactuar con sus personajes principales a través de un chat impulsado por la API de OpenIA. La experiencia está optimizada para todos los dispositivos. | Javascript, HTML, CSS, Figma |
-| [Search Movie](#) | Sitio web informativo para usuarios, enfocado en la búsqueda de películas, series y más, adaptado a una búsqueda inteligente y ordenamiento según los requerimientos del usuario. | ReactJS, Typescript, SASS, Jest |
+| [Chat hunter X](https://chatxhunter-01.vercel.app/) | Aplicación SPA enfocada en fanáticos del anime que les permite interactuar con sus personajes principales a través de un chat impulsado por la API de OpenIA. La experiencia está optimizada para todos los dispositivos. | Javascript, HTML, CSS, Figma |
+| [Search Movie](https://dev-014-movie-challenge-fw-gold.vercel.app/) | Sitio web informativo para usuarios, enfocado en la búsqueda de películas, series y más, adaptado a una búsqueda inteligente y ordenamiento según los requerimientos del usuario. | ReactJS, Typescript, SASS, Jest |
 | [Restorder](#) | Aplicación basada en la gestión de servicios de restaurante, con creación de interfaz (cliente) y servidor (API). El diseño y maquetación están basados en la herramienta Figma. | ReactJS, Typescript, Postman, Tailwind, Figma, Jest |
 
 ---
