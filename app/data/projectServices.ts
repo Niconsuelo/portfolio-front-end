@@ -24,7 +24,7 @@ export const projectServices = [
         icon: faCode,
       },
       {
-        href: "https://hunterxversexchat.vercel.app/",
+        href: "https://chatxhunter-01.vercel.app/",
         label: "dataverse chat page",
         icon: faLaptop,
       },
