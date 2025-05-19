@@ -36,7 +36,7 @@ export const projectServices = [
     description:
       "Informative WEBSITE for users focused on the search of movies,series and more, adapted to an intelligent search and sorting based on customer requirements.",
     icon: "FaMobileAlt",
-    video: "/project2.mp4",
+    video: "/movie-search.mp4",
     extraInfo: "Review",
     technologies: [
       { src: "/typesccript1.svg", alt: "TS", label: "TS" },
@@ -52,7 +52,7 @@ export const projectServices = [
         icon: faCode,
       },
       {
-        href: "https://dev-014-movie-challenge-fw-gold.vercel.app/",
+        href: "https://searchmovie-uw9x.vercel.app/",
         label: "search movie page",
         icon: faLaptop,
       },

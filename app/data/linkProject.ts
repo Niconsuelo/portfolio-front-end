@@ -5,12 +5,12 @@ export const linkProject = [
   {
     linkproject1: [
       {
-        href: "https://google.com/",
+        href: "https://github.com/Niconsuelo/chatxhunter",
         label: "dataverse chat code",
         icon: FaGithub,
       },
       {
-        href: "https://hunterxversexchat.vercel.app/",
+        href: "https://chatxhunter-01.vercel.app/",
         label: "dataverse chat page",
         icon: faArrowUpRightFromSquare,
       },
@@ -19,12 +19,12 @@ export const linkProject = [
   {
     linkproject2: [
       {
-        href: "https://google.com/",
+        href: "https://github.com/Niconsuelo/searchmovie",
         label: "search movie code",
         icon: FaGithub,
       },
       {
-        href: "https://dev-014-movie-challenge-fw-gold.vercel.app/",
+        href: "https://searchmovie-uw9x.vercel.app/",
         label: "search movie page",
         icon: faArrowUpRightFromSquare,
       },
