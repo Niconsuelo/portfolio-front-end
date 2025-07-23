@@ -79,8 +79,8 @@ export default function Home() {
   //descarga CV
   const downloadCV = () => {
     const link = document.createElement("a") as HTMLAnchorElement;
-    link.href = "/CV-Web Developer-Nicole-Aburto.pdf";
-    link.download = "/CV-Web Developer-Nicole-Aburto.pdf";
+    link.href = "/CV-NicoleAburto.pdf";
+    link.download = "/CV-NicoleAburto.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
